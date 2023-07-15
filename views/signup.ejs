@@ -1,0 +1,32 @@
+<%- include("partials/header") -%>
+
+  <body class="text-center">
+    <main class="form-signin w-100 m-auto">
+      <form action="/" method="post">
+        <img class="mb-4" src="images/newsletter.png" alt="" width="82" height="67" />
+        <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+        <div class="form-floating">
+          <input type="text" name="firstName" class="form-control top" id="floatingFirstName" placeholder="First name"/ autofocus>
+          <label for="floatingFirstName">First name</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" name="lastName" class="form-control middle" id="floatingLastName" placeholder="Last name" />
+          <label for="floatingLastName">Last name</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" name="email" class="form-control bottom" id="floatingEmail" placeholder="Email" />
+          <label for="floatingEmail">Email</label>
+        </div>
+        <% if(isAdded){ %>
+          <p class="text-bg-danger">Already added email</p> 
+        <% } %>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Sign up
+        </button>
+        <p class="mt-5 mb-3 text-muted">&copy; Newsletter</p>
+      </form>
+    </main>
+  </body>
+
+<%- include("partials/footer") -%>
